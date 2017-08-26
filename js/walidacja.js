@@ -23,10 +23,10 @@ function waliduj() {
         alert("Wypełnij e-mail");
     }
     if (!zgoda_marketingowa_1.checked) {
-        alert("Zaznacz pierwszą zgodę")
+        alert("Zaznacz pierwszą zgodę");
     }
 
-
+    // żeby zmienić tak, żeby na alercie wszystkie informacje były od razu pokazane to trzeba 
 }
 
 wyslijBtn.addEventListener("click", waliduj);
