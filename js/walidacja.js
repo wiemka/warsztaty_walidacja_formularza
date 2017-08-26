@@ -2,14 +2,19 @@
 
 var wyslijBtn = document.getElementById("wyślij");
 var wszystkieZgody = document.getElementById("zgoda_all");
+var zgoda_marketingowa_1 = document.getElementById("zgoda_1");
+var zgoda_marketingowa_2 = document.getElementById("zgoda_2");
 
 function stanCheckbox() {
-    if (zgoda_all.checked) {
-        document.getElementById("zgoda_1").checked = true;
-        document.getElementById("zgoda_2").checked = true;
+
+    // this.checked - zwraca true/false
+
+    if (this.checked) {
+        zgoda_marketingowa_1.checked = true;
+        zgoda_marketingowa_2.checked = true;
     } else {
-        document.getElementById("zgoda_1").checked = false;
-        document.getElementById("zgoda_2").checked = false;
+        zgoda_marketingowa_1.checked = false;
+        zgoda_marketingowa_2.checked = false;
     }
 }
 
@@ -22,7 +27,7 @@ function waliduj() {
     if (document.getElementById("email").value.trim() == "") {
         alert("Wypełnij e-mail");
     }
-    if (!document.getElementById("zgoda_1").checked) {
+    if (!zgoda_marketingowa_1.checked) {
         alert("Zaznacz pierwszą zgodę")
     }
 
