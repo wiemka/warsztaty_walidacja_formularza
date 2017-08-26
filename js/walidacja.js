@@ -1,10 +1,19 @@
 'use strict';
 
 var wyslijBtn = document.getElementById("wyślij");
+var wszystkieZgody = document.getElementById("zgoda_all");
 
-function stanCheckbox {
-    alert("działa");
+function stanCheckbox() {
+    if (zgoda_all.checked) {
+        document.getElementById("zgoda_1").checked = true;
+        document.getElementById("zgoda_2").checked = true;
+    } else {
+        document.getElementById("zgoda_1").checked = false;
+        document.getElementById("zgoda_2").checked = false;
+    }
 }
+
+//document.getElementById(zgoda_all).onchange = stanCheckbox;
 
 function waliduj() {
     if (document.getElementById("imie").value.trim() == "") {
@@ -21,3 +30,4 @@ function waliduj() {
 }
 
 wyslijBtn.addEventListener("click", waliduj);
+wszystkieZgody.addEventListener("change", stanCheckbox)
